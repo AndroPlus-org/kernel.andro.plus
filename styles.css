@@ -295,7 +295,15 @@ a img{
     width: 100%;
     z-index: 1;
   }
+.android-phone2 {
+  display: inline-block;
+  width: 64px;
+}
 
+  .android-phone2 .android-screen-image {
+    width: 100%;
+    z-index: 1;
+  }
 
 .android-tablet {
   display: inline-block;
