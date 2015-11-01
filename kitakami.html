@@ -22,7 +22,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Introducing AndroPlus Kernel, a custom kernel for Xperia.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AndroPlus Kernel</title>
+    <title>AndroPlus Kernel for kitakami Z4 Tablet</title>
 
     <!-- Page styles -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=ja" rel="stylesheet">
@@ -30,7 +30,8 @@
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
     <script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -92,38 +93,175 @@
       <div class="android-content mdl-layout__content">
         <a name="top"></a>
         <div class="android-be-together-section mdl-typography--text-center">
-          <div class="android-font android-slogan">AndroPlus Kernel</div>
-          <div class="android-font android-sub-slogan">welcome to androplus kernel... be yourself. do your thing. make your own experience.</div>
-
+          <div class="android-font android-slogan">AndroPlus Kernel<br />for Xperia Z4 Tablet</div>
         </div>
-        <div class="android-screen-section mdl-typography--text-center">
+        
+        <div class="android-requirements-section mdl-typography--text-center">
+         <div class="mdl-typography--display-1-color-contrast">Requirements</div>
+         <ul class="requirements">
+	         <li>Xperia Z4 Tablet [SGP712 / SGP771]</li>
+	         <br />
+		<li>stock 5.0.2</li>
+		<li>28.0.A.8.251 -> v4 -</li>
+		<li>28.0.A.7.24 / 28.0.A.7.27 -> v1 - v3</li>
+		<br />
+		<li>Unlocked bootloader</li>
+	</ul>
+        </div>
+        
+        <div id="download" class="android-screen-section mdl-typography--text-center">
           <a name="screens"></a>
-          <div class="mdl-typography--display-1-color-contrast">Supported devices</div>
+          <div class="mdl-typography--display-1-color-contrast">Download</div>
           <div class="android-screens">
-            <div class="android-phone android-screen">
-              <a class="android-image-link" href="shinano.html">
-                <img class="android-screen-image" src="images/sirius.png">
-                <img class="android-screen-image" src="images/leo.png">
-                <img class="android-screen-image" src="images/aries.png">
-              </a>
-              <a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase" href="shinano.html">Xperia Z2 / Z3 / Z3 Compact</a>
-            </div>
-            <div class="android-tablet android-screen">
-              <a class="android-image-link" href="kitakami.html">
+            <div class="android-tablet-dl3 android-screen">
+              <a class="android-image-link" href="https://dl.androplus.org/Xperia%20Z4%20Tablet%20SGP712_SGP771/">
                 <img class="android-screen-image" src="images/karin.png">
               </a>
-              <a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase" href="kitakami.html">Xperia Z4 Tablet</a>
+              <a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase" href="https://dl.androplus.org/Xperia%20Z4%20Tablet%20SGP712_SGP771/">Xperia Z4 Tablet</a>
+              <a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase" href="https://dl.cubeserver.eu/AndroPlus/Xperia%20Z4%20Tablet%20SGP712_SGP771/">(mirror)</a>
             </div>
-            <div class="android-phone android-screen">
-              <a class="android-image-link" href="kitakami_r2.html">
-                <img class="android-screen-image" src="images/sumire.png">
-                <img class="android-screen-image" src="images/suzuran.png">
-              </a>
-              <a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase" href="kitakami_r2.html">Xperia Z5 / Z5 Compact</a>
-            </div>
+            
           </div>
         </div>
- 
+        <!--
+        <div class="android-changelog-section mdl-typography--text-center">
+         	<div class="mdl-typography--display-1-color-contrast">Notice and FAQ</div>
+         	<div class="android-changelog">
+         	<p>
+         	Some people reported my kernel isn't compatible with XZDualRecovery.<br />
+		Please remove XZDR before installing my kernel.<br />
+		(Remove tool can be found at <a href="http://nut.xperia-files.com/">http://nut.xperia-files.com/</a>.<br />
+		Don't ask how to download it in my threads.)
+		</p>
+		<p>
+		2. DO NOT complain about unstableness when you are overclocking your phone.<br />
+		Reboot while benchmarking is expected since overclocking can hurt your device.
+		</p>
+		<p>
+		3. Sound Control (FauxSound) and Taiko_control is EXPERIMENTAL!<br />
+		Speaker gain control won't work, please DO NOT report it as a bug.
+		</p>
+		<p>
+		FauxClock has some bugs.
+		I recommend to use <a href="https://play.google.com/store/apps/details?id=com.grarak.kerneladiutor">Kernel Adiutor</a> to configure this kernel.
+		</p>
+		--------------------------------------
+		<p>
+		FAQ<br />
+		Q. Can you support UKSM?<br />
+		A. No, I tried but didn't boot with it.<br />
+		<br />
+		Q. Can you use GCC 5.1?<br />
+		A. No, it didn't boot with GCC 5.1.<br />
+		<br />
+		Q. F2FS isn't working!<br />
+		A. I couldn't find how to auto-generate fstab for both EXT4 and F2FS on 5.1.<br />
+		F2FS is not supported for now.<br />
+		<br />
+		Q. CPU freq is staying at 1190 Mhz or something!<br />
+		A. It is caused by MPDecision for better performance.<br />
+		If you really think it's problem, just disable touch boost or change thermal decision to intelli_thermal.<br />
+		<br />
+		To disable MPDecision and log spam "QCOM PowerHAL: Failed to acquire lock",<br />
+		you have to enter these commands in adb shell:<br />
+		busybox mount -o remount,rw /system<br />
+		mv /system/vendor/lib/hw/power.qcom.so /system/vendor/lib/hw/power.qcom.so.bak<br />
+		mv /system/bin/mpdecision /system/bin/mpdecision.bak<br />
+		</p>
+        	</div>
+        </div>
+        -->
+        <div id="changelog" class="android-changelog-section mdl-typography--text-center">
+         	<div class="mdl-typography--display-1-color-contrast">Changelog</div>
+         	<div class="android-changelog">
+         	Stable/supporting version : v6<br>
+Testing/experimental version : ---<br>
+--------------------------------------<br>
+v6<br>
+Fixed brightness in TWRP<br>
+Added impulse CPU governor<br>
+Added Boeffla Sound<br>
+*This is not included in Kernel Adiutor for now.<br>
+To enable, you have to run command or mod file with root explorer.<br>
+<div style="margin:20px; margin-top:5px">
+        
+	<pre class="alt2 " dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 82px;
+		text-align: left;
+		overflow: auto">Enable Boeffla Sound:
+echo "1" &gt; /sys/class/misc/boeffla_sound/boeffla_sound
+Change headphone volume (first one is right, second is left)
+echo "-1 -1" &gt; /sys/class/misc/boeffla_sound/headphone_volume</pre>
+</div>Added Zen I/O scheduler<br>
+Added some optimizations<br>
+<br>
+v5<br>
+TWRP is now working!<br>
+Merge fxp's patch for touch driver<br>
+<br>
+v4<br>
+! this version and above are kernel for 28.0.A.8.251 !<br>
+Disabled DM_VERITY and CORESIGHT (debugging)<br>
+SELinux is now Enforcing<br>
+-------------------------------------<br>
+<div class="bbcode-hide" style="margin:10px; margin-top:5px">
+Show older changelog <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-0">
+	<input type="checkbox" id="switch-0" class="mdl-switch__input" />
+	<span class="mdl-switch__label"></span>
+</label>
+    <div style="display: none;">
+v3<br>
+Updated kcal and cpuquiet<br>
+Added some patches<br>
+<br>
+v2a<br>
+Enabled loading recovery image from recovery (FOTAKernel) partition<br>
+<br>
+v2<br>
+Added KCAL<br>
+Added additional TCP cong algorithms<br>
+Added intelli_thermal v3.0<br>
+Added CPUQuiet<br>
+Enable all cores at boot for faster booting<br>
+Added sysfs interface to Enable / Disable Android Logger (/sys/kernel/logger_mode)<br>
+Enable class AB sound by default<br>
+<br>
+v1<br>
+First custom kernel!<br>
+GPU clock 630Mhz<br>
+Some GPU related patch<br>
+I/O scheduler SIO and FIOPS<br>
+ric disabled (thanks DHGE!)<br>
+half-insecure adb (thanks to security...)
+		</div>
+</div>
+        <script>
+        $(".mdl-switch__input").prop("checked",false);
+        $(".mdl-switch").click(function() {
+	        if ($(this).hasClass('is-checked') ) {
+	        	$(this).next('div').hide("300");
+	        } else {
+	        	$(this).next('div').show("300");
+	        }
+        });
+        </script>
+
+        </div>
+ </div>
+        
+        <div class="android-changelog-section mdl-typography--text-center">
+         	<div class="mdl-typography--display-1-color-contrast">Source</div>
+         	<div class="android-changelog">
+         	<p>
+		<a href="https://github.com/AndroPlus-org/android_kernel_sony_msm8994">Github</a>
+		</p>
+        	</div>
+        </div>
+        
         <div class="android-more-section">
           <div class="android-section-title mdl-typography--display-1-color-contrast">More from AndroPlus</div>
           <div class="android-card-container mdl-grid">

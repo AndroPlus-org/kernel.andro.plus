@@ -224,6 +224,13 @@ a img{
   padding-top: 60px;
 }
 
+.requirements{
+    padding:15px;
+    width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
 .android-screen-section {
   position: relative;
   padding-top: 60px;
@@ -244,12 +251,11 @@ a img{
 
 .android-changelog-section {
   position: relative;
-  padding-top: 60px;
   padding-bottom: 80px;
 }
 
 .android-changelog {
-  text-align: center;
+  text-align: left;
   width: 500px;
   margin: 0 auto;
   white-space: nowrap;
@@ -330,11 +336,9 @@ a img{
     z-index: 1;
   }
 
-.requirements{
-    padding:15px;
-    width: 500px;
-    margin: 0 auto;
-    list-style: none;
+hr{
+width:50%;
+margin: 0px auto;
 }
 
 .android-link {

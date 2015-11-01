@@ -20,9 +20,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Introducing Lollipop, a sweet new take on Android.">
+    <meta name="description" content="Introducing AndroPlus Kernel, a custom kernel for Xperia.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Android</title>
+    <title>AndroPlus Kernel for shinano Z2, Z3, Z3 Compact</title>
 
     <!-- Page styles -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=ja" rel="stylesheet">
@@ -31,6 +31,19 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-49043288-3', 'auto');
+	ga('require', 'linkid');
+	ga('require', 'displayfeatures');
+	ga('send', 'pageview');
+
+    </script>
   </head>
   <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -87,25 +100,35 @@
          <div class="mdl-typography--display-1-color-contrast">Requirements</div>
          <ul class="requirements">
 	         <li>Xperia Z2 [D6502 / D6503 / D6543]</li>
-		<li>stock 4.4.4, 5.0.2 or 5.1.1</li>
+	         <br />
+		<li>stock 5.1.1</li>
 		<li>23.4.A.1.200 and 23.4.A.1.232 - v70 ~</li>
 		<li>23.4.A.0.546 - v60 ~ v67</li>
+		<li>stock 5.0.2</li>
 		<li>23.1.A.0.690 / 23.1.A.0.726 and 23.1.A.1.28 / 23.2.A.1.62 - v50 ~ v59</li>
+		<li>stock 4.4.4</li>
 		<li>23.0.1.A.3.12 - v10 ~ v32</li>
+		<br />
+		<li>Unlocked bootloader</li>
 	</ul>
-	
+	<hr />
 	<ul class="requirements">
 		<li>Xperia Z3 [D6603 / D6653 / D6643] or Xperia Z3 Compact [D5803 / D5833]</li>
-		<li>stock 4.4.4, 5.0.2 or 5.1.1</li>
+		<br />
+		<li>stock 5.1.1</li>
 		<li>23.4.A.1.200 and 23.4.A.1.232 - v70 ~</li>
 		<li>23.4.A.0.546 - v60 ~ v67</li>
+		<li>stock 5.0.2</li>
 		<li>23.1.A.0.690 / 23.1.A.0.726 and 23.1.A.1.28 / 23.2.A.1.62 - v50 ~ v59</li>
+		<li>stock 4.4.4</li>
 		<li>23.0.1.A.5.77 - v10 ~ v32</li>
 		<li>23.0.A.2.105 or .98, .93 - v1 ~ v9</li>
+		<br />
+		<li>Unlocked bootloader</li>
 	</ul>
         </div>
         
-        <div class="android-screen-section mdl-typography--text-center">
+        <div id="download" class="android-screen-section mdl-typography--text-center">
           <a name="screens"></a>
           <div class="mdl-typography--display-1-color-contrast">Download</div>
           <div class="android-screens">
@@ -132,17 +155,66 @@
               <a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase" href="https://dl.androplus.org/Xperia%20Z3%20Compact%20D5803_D5833/">Xperia Z3 Compact</a>
               <a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase" href="https://dl.cubeserver.eu/AndroPlus/Xperia%20Z3%20Compact%20D5803_D5833/">(mirror)</a>
             </div>
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- レスポンシブ記事下 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0606165858439985"
+     data-ad-slot="8365603791"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
           </div>
         </div>
         
         <div class="android-changelog-section mdl-typography--text-center">
-         	<div class="mdl-typography--display-1-color-contrast">Notice</div>
+         	<div class="mdl-typography--display-1-color-contrast">Notice and FAQ</div>
          	<div class="android-changelog">
+         	<p>
          	Some people reported my kernel isn't compatible with XZDualRecovery.<br />
-		Please remove XZDR before installing my kernel.
+		Please remove XZDR before installing my kernel.<br />
+		(Remove tool can be found at <a href="http://nut.xperia-files.com/">http://nut.xperia-files.com/</a>.<br />
+		Don't ask how to download it in my threads.)
+		</p>
+		<p>
+		2. DO NOT complain about unstableness when you are overclocking your phone.<br />
+		Reboot while benchmarking is expected since overclocking can hurt your device.
+		</p>
+		<p>
+		3. Sound Control (FauxSound) and Taiko_control is EXPERIMENTAL!<br />
+		Speaker gain control won't work, please DO NOT report it as a bug.
+		</p>
+		<p>
+		FauxClock has some bugs.
+		I recommend to use <a href="https://play.google.com/store/apps/details?id=com.grarak.kerneladiutor">Kernel Adiutor</a> to configure this kernel.
+		</p>
+		--------------------------------------
+		<p>
+		FAQ<br />
+		Q. Can you support UKSM?<br />
+		A. No, I tried but didn't boot with it.<br />
+		<br />
+		Q. Can you use GCC 5.1?<br />
+		A. No, it didn't boot with GCC 5.1.<br />
+		<br />
+		Q. F2FS isn't working!<br />
+		A. I couldn't find how to auto-generate fstab for both EXT4 and F2FS on 5.1.<br />
+		F2FS is not supported for now.<br />
+		<br />
+		Q. CPU freq is staying at 1190 Mhz or something!<br />
+		A. It is caused by MPDecision for better performance.<br />
+		If you really think it's problem, just disable touch boost or change thermal decision to intelli_thermal.<br />
+		<br />
+		To disable MPDecision and log spam "QCOM PowerHAL: Failed to acquire lock",<br />
+		you have to enter these commands in adb shell:<br />
+		busybox mount -o remount,rw /system<br />
+		mv /system/vendor/lib/hw/power.qcom.so /system/vendor/lib/hw/power.qcom.so.bak<br />
+		mv /system/bin/mpdecision /system/bin/mpdecision.bak<br />
+		</p>
         	</div>
         </div>
-        <div class="android-changelog-section mdl-typography--text-center">
+        <div id="changelog" class="android-changelog-section mdl-typography--text-center">
          	<div class="mdl-typography--display-1-color-contrast">Changelog</div>
          	<div class="android-changelog">
          	Stable/supporting version : v70<br>
@@ -698,6 +770,15 @@ SIO I/O scheduler
 	        }
         });
         </script>
+        
+        <div class="android-changelog-section mdl-typography--text-center">
+         	<div class="mdl-typography--display-1-color-contrast">Source</div>
+         	<div class="android-changelog">
+         	<p>
+		<a href="https://github.com/AndroPlus-org/android_kernel_sony_msm8974ac">Github</a>
+		</p>
+        	</div>
+        </div>
  
         <div class="android-more-section">
           <div class="android-section-title mdl-typography--display-1-color-contrast">More from AndroPlus</div>
