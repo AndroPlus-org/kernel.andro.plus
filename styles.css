@@ -336,6 +336,16 @@ a img{
     z-index: 1;
   }
 
+.android-phone2-dl3 {
+  display: inline-block;
+  width: 96px;
+}
+
+  .android-phone2-dl3 .android-screen-image {
+    width: 100%;
+    z-index: 1;
+  }
+
 hr{
 width:50%;
 margin: 0px auto;
