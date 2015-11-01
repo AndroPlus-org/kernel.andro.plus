@@ -120,7 +120,7 @@
         
         <div class="android-screen-section mdl-typography--text-center">
           <a name="screens"></a>
-          <div id="download" class="mdl-typography--display-1-color-contrast">Download</div>
+          <div id="download" name="download" class="mdl-typography--display-1-color-contrast">Download</div>
           <div class="android-screens">
             <div class="android-phone-dl3 android-screen">
               <a class="android-image-link" href="https://dl.androplus.org/Xperia%20Z5_E6653/">
@@ -199,7 +199,7 @@
         </div>
         -->
         <div class="android-changelog-section mdl-typography--text-center">
-         	<div id="changelog" class="mdl-typography--display-1-color-contrast">Changelog</div>
+         	<div id="changelog" name="changelog" class="mdl-typography--display-1-color-contrast">Changelog</div>
          	<div class="android-changelog">
          	Stable/supporting version : v1<br>
 Testing/experimental version : ---<br>
@@ -375,21 +375,6 @@ insecure adb
     </div>
 
     <script src="material.min.js"></script>
-    <script type="text/javascript">
-	$(function(){
-	    var url = $(location).attr('href');
-	    if (url.indexOf("?id=") == -1) {
-	        // スムーズスクロール以外の処理（必要なら）
-	    }else{
-	        // スムーズスクロールの処理
-	        var url_sp = url.split("?id=");
-	        var hash   = '#' + url_sp[url_sp.length - 1];
-	        var tgt    = $(hash);
-	        var pos    = tgt.offset().top;
-	        $("html, body").animate({scrollTop:pos}, 2000, "swing");
-	    }
-	});
-    </script>
 
   </body>
 </html>
