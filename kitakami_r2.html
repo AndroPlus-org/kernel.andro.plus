@@ -226,19 +226,15 @@ Added impulse CPU governor<br>
 Added tomtom-sound-control<br>
 *This is not included in Kernel Adiutor for now.<br>
 To enable, you have to run command or mod file with root explorer.<br>
-<div style="margin:20px; margin-top:5px">
-        
-	<pre class="alt2 " dir="ltr" style="
-		margin: 0px;
-		padding: 6px;
-		border: 1px inset;
-		width: 640px;
-		height: 82px;
-		text-align: left;
-		overflow: auto">Enable tomtom-sound-control:
-echo "1" &gt; /sys/class/misc/tomtom_control/boeffla_sound
-Change headphone volume (first one is right, second is left)
-echo "-1 -1" &gt; /sys/class/misc/tomtom_control/headphone_volume</pre>
+<div class="code_blk">
+        <pre class="alt2 code" dir="ltr">Enable tomtom-sound-control:
+echo "1" &gt; /sys/class/misc/tomtom_control/enabled
+Change headphone volume (first one is left, second is right)
+echo "-1 -1" &gt; /sys/class/misc/tomtom_control/hpgain
+Change mic volume (first one is left, second is right)
+echo "-1 -1" &gt; /sys/class/misc/tomtom_control/micgain
+Change camera mic volume (first one is left, second is right)
+echo "-1 -1" &gt; /sys/class/misc/tomtom_control/cmicgain</pre>
 </div>
 Added Zen I/O scheduler<br>
 Disabled DM_VERITY and CORESIGHT (debugging)<br>

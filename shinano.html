@@ -260,17 +260,8 @@ Re-updated bfq I/O gov to v7r8<br>
 Reduced log spam<br>
 * To disable log spam "QCOM PowerHAL: Failed to acquire lock",<br>
 you have to enter these commands in adb shell:<br>
-<div style="margin:20px; margin-top:5px">
-	<div class="smallfont" style="margin-bottom:2px">Code: </div>
-        
-	<pre class="alt2 " dir="ltr" style="
-		margin: 0px;
-		padding: 6px;
-		border: 1px inset;
-		width: 640px;
-		height: 66px;
-		text-align: left;
-		overflow: auto">busybox mount -o remount,rw /system
+<div class="code_blk">
+        <pre class="alt2 code" dir="ltr">busybox mount -o remount,rw /system
 mv /system/vendor/lib/hw/power.qcom.so /system/vendor/lib/hw/power.qcom.so.bak
 mv /system/bin/mpdecision /system/bin/mpdecision.bak</pre>
 </div>v65<br>
@@ -666,15 +657,8 @@ v16<br>
 -O3 + A15 + Graphite Optimizations<br>
 Added some patches for network and memory management<br>
 Added power key emulator - faster than "input keyevent 26"<br>
-<div style="margin:20px; margin-top:5px">
-	<pre class="alt2 " dir="ltr" style="
-		margin: 0px;
-		padding: 6px;
-		border: 1px inset;
-		width: auto;
-		height: 82px;
-		text-align: left;
-		overflow: auto">#For screen off
+<div class="code_blk">
+        <pre class="alt2 code" dir="ltr">#For screen off
 echo 10 &gt; /sys/kernel/ponkey/ponkey_emu
 #For power menu
 echo 600 &gt; /sys/kernel/ponkey/ponkey_emu</pre>

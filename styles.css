@@ -40,6 +40,21 @@ a img{
   color: #fff;
 }
 
+.code_blk{
+  margin:20px;
+  margin-top:5px
+}
+
+.code_blk .code{
+  margin: 0px;
+  padding: 6px;
+  border: 1px inset;
+  width: 95%;
+  height: auto;
+  text-align: left;
+  overflow: auto
+}
+
 .android-search-box .mdl-textfield__input {
   color: rgba(0, 0, 0, 0.87);
 }
@@ -257,9 +272,8 @@ a img{
 .android-changelog {
   text-align: left;
   width: 500px;
+  max-width: 90%;
   margin: 0 auto;
-  white-space: nowrap;
-
   padding-top:24px;
 }
 

@@ -200,25 +200,36 @@
         <div class="android-changelog-section mdl-typography--text-center">
          	<div id="changelog" name="changelog" class="mdl-typography--display-1-color-contrast">Changelog</div>
          	<div class="android-changelog">
-         	Stable/supporting version : v6<br>
+         	Stable/supporting version : v7<br>
 Testing/experimental version : ---<br>
 --------------------------------------<br>
+v7<br>
+!Important! Changed to load recovery image only from recovery partition to reduce file size<br>
+* You can download my TWRP image from same folder of download link
+<div class="code_blk">
+        <pre class="alt2 code" dir="ltr">fastboot flash recovery TWRP-2.8.7.0.img</pre>
+</div>
+Changed sound control to tomtom_control (thanks Tommy-Geenexus)<br>
+<div class="code_blk">
+        <pre class="alt2 code" dir="ltr">Enable tomtom-sound-control:
+echo "1" &gt; /sys/class/misc/tomtom_control/enabled
+Change headphone volume (first one is left, second is right. From -20 to 20)
+echo "-1 -1" &gt; /sys/class/misc/tomtom_control/hpgain
+Change mic volume (first one is left, second is right. From -20 to 20)
+echo "-1 -1" &gt; /sys/class/misc/tomtom_control/micgain
+Change camera mic volume (first one is left, second is right. From -20 to 20)
+echo "-1 -1" &gt; /sys/class/misc/tomtom_control/cmicgain</pre>
+</div>
+Added some patches for crypto
+Muted some logspam
 v6<br>
 Fixed brightness in TWRP<br>
 Added impulse CPU governor<br>
 Added Boeffla Sound<br>
 *This is not included in Kernel Adiutor for now.<br>
 To enable, you have to run command or mod file with root explorer.<br>
-<div style="margin:20px; margin-top:5px">
-        
-	<pre class="alt2 " dir="ltr" style="
-		margin: 0px;
-		padding: 6px;
-		border: 1px inset;
-		width: 640px;
-		height: 82px;
-		text-align: left;
-		overflow: auto">Enable Boeffla Sound:
+<div class="code_blk">
+        <pre class="alt2 code" dir="ltr">Enable Boeffla Sound:
 echo "1" &gt; /sys/class/misc/boeffla_sound/boeffla_sound
 Change headphone volume (first one is right, second is left)
 echo "-1 -1" &gt; /sys/class/misc/boeffla_sound/headphone_volume</pre>
