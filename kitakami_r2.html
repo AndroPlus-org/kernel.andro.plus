@@ -160,7 +160,13 @@
 		2. Flash kernel using recovery or fastboot<br />
 		Recovery - Install zip<br />
 		fastboot - Extract boot.img from zip and run this command:<br />
-		fastboot flash boot boot.img<br />
+		<div class="code_blk">
+		        <pre class="alt2 code" dir="ltr">fastboot flash boot boot.img</pre>
+		</div>
+		If you have no recovery, you also need to flash recovery by this command:
+		<div class="code_blk">
+		        <pre class="alt2 code" dir="ltr">fastboot flash recovery twrp-2.8.7.0-E6653-20151114_material.img</pre>
+		</div>
 		3. Reboot<br />
 		4. Done!<br />
 		</p>
@@ -217,9 +223,18 @@
         <div class="android-changelog-section mdl-typography--text-center">
          	<div id="changelog" name="changelog" class="mdl-typography--display-1-color-contrast">Changelog</div>
          	<div class="android-changelog">
-         	Stable/supporting version : v3<br>
+         	Stable/supporting version : v4<br>
 Testing/experimental version : ---<br>
 --------------------------------------<br>
+v4<br />
+Released SELinux Permissive and Enforcing version for Z5
+Added toggle for preventing wakelock
+Added Powersuspend 1.5
+Added some patch
+Allowed to show CPU voltage (not changeable)
+Changed version name to contain version number: e.g. 3.10.49-v4 AndroPlus@org #41
+NOTE: The number after # is random number.
+<br />
 v3<br />
 Added dynamic sync control 2.0<br />
 <br />
