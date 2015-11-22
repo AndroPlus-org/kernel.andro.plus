@@ -144,7 +144,13 @@
 		2. Flash kernel using recovery or fastboot<br />
 		Recovery - Install zip<br />
 		fastboot - Extract boot.img from zip and run this command:<br />
-		fastboot flash boot boot.img<br />
+		<div class="code_blk">
+		        <pre class="alt2 code" dir="ltr">fastboot flash boot boot.img</pre>
+		</div>
+		If you have no recovery, you also need to flash recovery by this command:
+		<div class="code_blk">
+		        <pre class="alt2 code" dir="ltr">fastboot flash recovery TWRP-2.8.7.0.img</pre>
+		</div>
 		3. Reboot<br />
 		4. Done!<br />
 		</p>
@@ -209,6 +215,8 @@ Update source to 28.0.A.8.260
 Added toggle for preventing wakelock
 Added Powersuspend
 Added some patch
+Changed version name to contain version number: e.g. 3.10.49-v10 AndroPlus@org #10
+NOTE: The number after # is random number.
 <br />
 -------------------------------------<br>
 <div class="bbcode-hide" style="margin:10px; margin-top:5px">
