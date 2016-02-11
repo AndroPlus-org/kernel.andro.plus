@@ -207,9 +207,31 @@
         <div class="android-changelog-section mdl-typography--text-center">
          	<div id="changelog" name="changelog" class="mdl-typography--display-1-color-contrast">Changelog</div>
          	<div class="android-changelog">
-         	Stable/supporting version : v11<br>
+         	Stable/supporting version : v13<br>
 Testing/experimental version : ---<br>
 --------------------------------------<br>
+v13<br />
+Added thunderplug - hotplug & load balancer<br />
+<div class="code_blk">
+        <pre class="alt2 code" dir="ltr">Enable hotplug (1=hotplug, 2=load balancer):
+echo "1" &gt; /sys/kernel/thunderplug/hotplug_style
+Change endurance mode (0=disable, 1=quad core mode, 2=dual core mode):
+echo "1" &gt; /sys/kernel/thunderplug/endurance_level
+Disable hotplug and Enable load balancer (default):
+echo "0" &gt; /sys/kernel/thunderplug/endurance_level
+echo "2" &gt; /sys/kernel/thunderplug/hotplug_style
+Change load balancer mode (1=Balanced, 2=Turbo performance):
+echo "1" &gt; /sys/kernel/thunderplug/sched_mode</pre>
+</div>
+Added saving log of kernel panic (pstore)<br />
+previously it was last_kmsg, but now log location is
+<div class="code_blk">
+        <pre class="alt2 code" dir="ltr">/sys/fs/pstore/console-ramoops</pre>
+</div>
+Fixed kernel crash when msm thermal limits CPU freq<br />
+Added ZZMoove (test version)<br />
+Added some patches<br />
+<br />
 v11<br />
 Added patch commits for performance<br />
 Added power_efficient workqueue<br />
