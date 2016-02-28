@@ -231,18 +231,18 @@ Testing/experimental version : ---<br>
 v14<br />
 Removed some patches including thunderplug<br />
 Added limit for min/max cpu frequencies<br />
-<br />
-v12<br />
-Added undervolting (thnaks Hundsbuah)<br />
-*Note: Please don't blame if you get random reboot after undervolting.<br />
-Updated workqueue<br />
-Fixed some bugs and logspam<br />
 <div class="code_blk">
         <pre class="alt2 code" dir="ltr">Limit max freq of A57 (big):
 echo "1536000" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq_hardlimit
 Limit max freq of A53 (LITTLE):
  echo "1344000" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq_hardlimit</pre>
 </div>
+<br />
+v12<br />
+Added undervolting (thnaks Hundsbuah)<br />
+*Note: Please don't blame if you get random reboot after undervolting.<br />
+Updated workqueue<br />
+Fixed some bugs and logspam<br />
 <br />
 v11<br />
 Added thunderplug - hotplug & load balancer<br />
