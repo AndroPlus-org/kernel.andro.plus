@@ -118,11 +118,10 @@
           <div id="download" name="download" class="mdl-typography--display-1-color-contrast">Download</div>
           <div class="android-screens">
             <div class="android-tablet-dl3 android-screen">
-              <a class="android-image-link" href="https://dl.androplus.org/Xperia%20Z4%20Tablet%20SGP712_SGP771/">
+              <a class="android-image-link" href="https://www.androidfilehost.com/?w=files&flid=52181">
                 <img class="android-screen-image" src="images/karin.png">
               </a>
-              <a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase" href="https://dl.androplus.org/Xperia%20Z4%20Tablet%20SGP712_SGP771/">Xperia Z4 Tablet</a>
-              <a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase" href="https://dl.cubeserver.eu/AndroPlus/Xperia%20Z4%20Tablet%20SGP712_SGP771/">(mirror)</a>
+              <a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase" href="https://www.androidfilehost.com/?w=files&flid=52181">Xperia Z4 Tablet</a>
             </div>
 <br />--------------------------------------<br>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -209,9 +208,46 @@
         <div class="android-changelog-section mdl-typography--text-center">
          	<div id="changelog" name="changelog" class="mdl-typography--display-1-color-contrast">Changelog</div>
          	<div class="android-changelog">
-         	Stable/supporting version : v14<br>
+         	Stable/supporting version : v21<br>
 Testing/experimental version : ---<br>
 --------------------------------------<br>
+v21<br />
+Removed PowerSuspend due wakelock problem<br />
+Added support for cdrom (DriveDroid)<br />
+Set ROW I/O scheduler as default<br />
+Fixed overflow in /sys/kernel/debug/msm8994_cpuinfo (thanks Tommy-Geenexus)<br />
+Enabled elementalx CPU governor<br />
+To limit CPU freq and fix CPU governor, run script like this:<br />
+<div class="code_blk">
+        <pre class="alt2 code" dir="ltr">for i in `seq 0 7`
+do
+
+if [ $i -le 3 ]; then
+if [ -e /sys/devices/system/cpu/cpu$i/cpufreq/scaling_max_freq_hardlimit ]; then
+echo "1344000" > /sys/devices/system/cpu/cpu$i/cpufreq/scaling_max_freq_hardlimit
+fi
+fi
+
+if [ $i -ge 4 ]; then
+if [ -e /sys/devices/system/cpu/cpu$i/cpufreq/scaling_max_freq_hardlimit ]; then
+echo "1536000" > /sys/devices/system/cpu/cpu$i/cpufreq/scaling_max_freq_hardlimit
+fi
+fi
+
+if [ $i -le 3 ]; then
+if [ -e /sys/devices/system/cpu/cpu$i/cpufreq/scaling_governor_hard ]; then
+echo "elementalx" > /sys/devices/system/cpu/cpu$i/cpufreq/scaling_governor_hard
+fi
+fi
+
+if [ $i -ge 4 ]; then
+if [ -e /sys/devices/system/cpu/cpu$i/cpufreq/scaling_governor_hard ]; then
+echo "elementalx" > /sys/devices/system/cpu/cpu$i/cpufreq/scaling_governor_hard
+fi
+fi
+done</pre>
+</div>
+Note this is incomplete and you will loose those settings sometimes...<br />
 v20<br />
 Updated to Android 6.0 Marshmallow 32.1.A.1.163<br />
 Removed underclock due it break build<br />
