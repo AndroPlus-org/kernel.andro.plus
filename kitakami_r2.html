@@ -239,6 +239,17 @@
          	<div id="changelog" name="changelog" class="mdl-typography--display-1-color-contrast">Changelog</div>
          	<div class="android-changelog">
 --------------------------------------<br>
+v24<br />
+Added cluster_plug<br />
+<div class="code_blk">
+        <pre class="alt2 code" dir="ltr">Enable hotplug (1=enable, 0=disable):
+echo "1" > /sys/module/cluster_plug/parameters/active
+Enable low power mode (1=enable, 0=disable):
+echo "1" > /sys/module/cluster_plug/parameters/low_power_mode
+</pre>
+</div>
+Disabled workqueue<br />
+<br />
 v23<br />
 Updated ramdisk to 32.1.A.1.185<br />
 Added fix for bug in bcl<br />
