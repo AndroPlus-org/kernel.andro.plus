@@ -239,10 +239,20 @@
          	<div id="changelog" name="changelog" class="mdl-typography--display-1-color-contrast">Changelog</div>
          	<div class="android-changelog">
 --------------------------------------<br>
+v27<br />
+Always enabled CPU core 0 and 4 to prevent freq and gov resetting<br />
+Added software crc toggle<br />
+Added patch to prevent perfd to change max cpus and freqs<br />
+Re-added power_efficient workqueues<br />
+Added patch to support touch in MultiROM menu (not tested)<br />
+Set default ksm to stop state to save power on boot<br />
+Add the possibility to change the value for BCL's low power mode (default: 0)<br />
+sysfs path is: sys/module/battery_current_limit/parameters/soc_low_threshold<br />
+<br />
 v26<br />
 Reverted optimizations in v25 due it caused FC and other problems<br />
 Fixed loading of ecryptfs module (now you can encrypt your data, but decryption in TWRP isn't working)<br />
-Re-added alucard goc<br />
+Re-added alucard gov<br />
 Added optimizations for msm-core and vmpressure<br />
 <br />
 v25<br />
