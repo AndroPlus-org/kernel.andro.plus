@@ -143,17 +143,17 @@
          	<div class="mdl-typography--display-1-color-contrast">How to install</div>
          	<div class="android-changelog">
          	<p>
-		1. Reboot into <strike>recovery or</strike> bootloader<br />
-		2. Flash kernel using <strike>recovery or</strike> fastboot<br />
-		<strike>Recovery - Install zip<br /></strike>
+		1. Reboot into recovery or bootloader<br />
+		2. Flash kernel using recovery or fastboot<br />
+		Recovery - Install zip<br />
 		fastboot - Extract boot.img from zip and run this command:<br />
 		<div class="code_blk">
 		        <pre class="alt2 code" dir="ltr">fastboot flash boot boot.img</pre>
 		</div>
-		<strike>If you have no recovery, you also need to flash recovery by this command:
+		If you have no recovery, you also need to flash recovery by this command:
 		<div class="code_blk">
-		        <pre class="alt2 code" dir="ltr">fastboot flash recovery TWRP-3.0.2-0-F8132-20160619.img</pre>
-		</div></strike>
+		        <pre class="alt2 code" dir="ltr">fastboot flash recovery TWRP-3.0.2-0-F8132-20160710.img</pre>
+		</div>
 		3. Reboot<br />
 		4. Done!<br />
 		</p>
@@ -171,6 +171,24 @@
         <div class="android-changelog-section mdl-typography--text-center">
          	<div id="changelog" name="changelog" class="mdl-typography--display-1-color-contrast">Changelog</div>
          	<div class="android-changelog">
+v02<br />
+Now you can load TWRP! ... but touch and decryption are broken for now.<br />
+To use TWRP:<br />
+1. Flash TWRP in fastboot<br />
+<div class="code_blk">
+        <pre class="alt2 code" dir="ltr">fastboot flash recovery TWRP-3.0.2-0-F8132-20160710.img</pre>
+</div>
+2. Press volume up or down key when LED is orange<br />
+3. TWRP will boot, but it will show decryption screen which is not working.<br />
+Also touch isn't working, so you have to connect USB mouse to control.<br />
+4. Tap "Cancel" to skip decryption. You can't modify/restore /data including internal storage.<br />
+<br />
+* If you really need to modify/restore /data in TWRP, you can disable encryption by wiping data in settings app (Backup and reset -> Factory data reset). Note you must not boot with stock kernel without modification after disabling decryption since it will automatically re-encrypt your data. I lost much time with it...<br />
+<br />
+Updated version code to support 35.0.A.1.238<br />
+* You should disable software update app to prevent persistent update notification. It says your system is not up to date when it finds new OTA, but actually minor update don't need kernel update. Also you can't apply OTA after bootloader unlocking.<br />
+Added patch to allow clients to get small buffers (1ms) for lowest latency<br />
+<br />
 v01<br />
 To root F8132, run these commands in command prompt, then reboot<br />
 <div class="code_blk">
