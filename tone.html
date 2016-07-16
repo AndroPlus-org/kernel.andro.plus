@@ -172,18 +172,16 @@
          	<div id="changelog" name="changelog" class="mdl-typography--display-1-color-contrast">Changelog</div>
          	<div class="android-changelog">
 v02<br />
-Now you can load TWRP! ... but touch and decryption are broken for now.<br />
+Now you can load TWRP!<br />
 To use TWRP:<br />
 1. Flash TWRP in fastboot<br />
 <div class="code_blk">
-        <pre class="alt2 code" dir="ltr">fastboot flash recovery TWRP-3.0.2-0-F8132-20160710.img</pre>
+        <pre class="alt2 code" dir="ltr">fastboot flash recovery TWRP-3.0.2-2-F8132-20160714.img</pre>
 </div>
 2. Press volume up or down key when LED is orange<br />
-3. TWRP will boot, but it will show decryption screen which is not working.<br />
-Also touch isn't working, so you have to connect USB mouse to control.<br />
-4. Tap "Cancel" to skip decryption. You can't modify/restore /data including internal storage.<br />
+3. Enter password/pin/pattern to decrypt your data.<br />
 <br />
-* If you really need to modify/restore /data in TWRP, you can disable encryption by wiping data in settings app (Backup and reset -> Factory data reset). Note you must not boot with stock kernel without modification after disabling decryption since it will automatically re-encrypt your data. I lost much time with it...<br />
+*NOTE: TWRP 3.0.2-2 only supports encryption with password/pin/pattern on boot for now, so you have to set password/pin/pattern in Settings -> Security -> Screen lock -> Select password/pin/pattern -> Select "Require (password/pin/pattern) to start device"<br />
 <br />
 Updated version code to support 35.0.A.1.238<br />
 * You should disable software update app to prevent persistent update notification. It says your system is not up to date when it finds new OTA, but actually minor update don't need kernel update. Also you can't apply OTA after bootloader unlocking.<br />
