@@ -104,14 +104,13 @@
         <div class="android-requirements-section mdl-typography--text-center">
          <div class="mdl-typography--display-1-color-contrast">Requirements</div>
          <ul class="requirements">
-	         <li>Xperia X Performance [F8132]</li>
+	         <li>Xperia X Performance [F8131 and F8132]</li>
 	         <br />
 		<li>stock 6.0</li>
 		<li>35.0.A.1.227 -> v1 - </li>
 		<br />
 		<li>Unlocked bootloader</li>
 	</ul>
-	*F8131 is not tested.
         </div>
         
         <div class="android-screen-section mdl-typography--text-center">
@@ -152,10 +151,13 @@
 		</div>
 		If you have no recovery, you also need to flash recovery by this command:
 		<div class="code_blk">
-		        <pre class="alt2 code" dir="ltr">fastboot flash recovery TWRP-3.0.2-0-F8132-20160710.img</pre>
+		        <pre class="alt2 code" dir="ltr">fastboot flash recovery TWRP-3.0.2-3-F8132.img</pre>
 		</div>
+		*NOTE: TWRP 3.0.2-3 only supports encryption with password/pin/pattern on boot for now, so you have to set password/pin/pattern in Settings -> Security -> Screen lock -> Select password/pin/pattern -> Select "Require (password/pin/pattern) to start device"<br />
 		3. Reboot<br />
 		4. Done!<br />
+		To root and install Xposed, you should flash BETA-SuperSU-v2.67 and xposed-v86-sdk23-arm64.zip in TWRP.<br />
+		First/second boot will be bootloop and take some time to boot up correctly.<br />
 		</p>
         	</div>
         </div>
@@ -171,6 +173,20 @@
         <div class="android-changelog-section mdl-typography--text-center">
          	<div id="changelog" name="changelog" class="mdl-typography--display-1-color-contrast">Changelog</div>
          	<div class="android-changelog">
+v03<br />
+Added KCAL (thanks @savoca, @faux123, @flar2, @tbalden)<br />
+Added Adrenoboost (thanks @tbalden)<br />
+<div class="code_blk">
+        <pre class="alt2 code" dir="ltr">echo "2" > /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost
+        0 -> off, 1 -> smooth/battery friendly, 2 -> stronger, 3 -> aggressive</pre>
+</div>
+Added support for USB keyboard / mouse function (thanks pelya)<br />
+<div class="code_blk">
+        <pre class="alt2 code" dir="ltr">You can use Xperia as USB keyboard / mouse with this app:
+https://play.google.com/store/apps/details?id=remote.hid.keyboard.client</pre>
+</div>
+Fixed CVE-2016-2547 (merged changes from 35.0.A.1.244)<br />
+<br />
 v02<br />
 Now you can load TWRP!<br />
 To use TWRP:<br />
@@ -188,12 +204,6 @@ Updated version code to support 35.0.A.1.238<br />
 Added patch to allow clients to get small buffers (1ms) for lowest latency<br />
 <br />
 v01<br />
-To root F8132, run these commands in command prompt, then reboot<br />
-<div class="code_blk">
-        <pre class="alt2 code" dir="ltr">adb shell
-rootsh +p
-./SuperSU_files/install_SuperSU.sh</pre>
-</div>
 Disabled DM_VERITY, force module sig and CORESIGHT (debugging)<br>
 Added DRM patch<br />
 (please delete
