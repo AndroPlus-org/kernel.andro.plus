@@ -173,6 +173,29 @@
         <div class="android-changelog-section mdl-typography--text-center">
          	<div id="changelog" name="changelog" class="mdl-typography--display-1-color-contrast">Changelog</div>
          	<div class="android-changelog">
+v10<br />
+Added core_ctl<br />
+<div class="code_blk">If you want to test it, you have to setup core_ctl. Example:
+        <pre class="alt2 code" dir="ltr">echo 0 > /sys/devices/system/cpu/cpu0/core_ctl/disable
+echo 2 > /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
+echo 2 > /sys/devices/system/cpu/cpu0/core_ctl/max_cpus
+echo 60 > /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres
+echo 40 > /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres
+echo 100 > /sys/devices/system/cpu/cpu0/core_ctl/offline_delay_ms
+echo 4 > /sys/devices/system/cpu/cpu0/core_ctl/task_thres
+
+echo 0 > /sys/devices/system/cpu/cpu2/core_ctl/disable
+echo 1 > /sys/devices/system/cpu/cpu2/core_ctl/is_big_cluster
+echo 0 > /sys/devices/system/cpu/cpu2/core_ctl/min_cpus
+echo 2 > /sys/devices/system/cpu/cpu2/core_ctl/max_cpus
+echo 68 > /sys/devices/system/cpu/cpu2/core_ctl/busy_up_thres
+echo 40 > /sys/devices/system/cpu/cpu2/core_ctl/busy_down_thres
+echo 100 > /sys/devices/system/cpu/cpu2/core_ctl/offline_delay_ms
+# big won't be online much
+echo 1 > /sys/devices/system/cpu/cpu2/core_ctl/not_preferred</pre>
+</div>
+Updated darkness & alucard gov<br />
+<br />
 v09<br />
 Add support for touch in MultiROM menu (thanks AdrianDC!)<br />
 Set initial TCP window size to 64K<br />
