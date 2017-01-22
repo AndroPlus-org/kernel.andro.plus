@@ -25,6 +25,14 @@ body {
   margin: 0;
 }
 
+.hscroll{
+  overflow-x: scroll
+}
+
+.clr{
+  clear:both;
+}
+
 /* Disable ugly boxes around images in IE10 */
 a img{
   border: 0px;
@@ -586,4 +594,32 @@ margin: 0px auto;
   .android-footer .mdl-mega-footer--bottom-section {
     display: none;
   }
+}
+
+.device-block,.device-name{
+    display: block;
+}
+.device-block{
+    height: 276px;
+}
+.supported-devices-block{
+    height: 330px;
+    width: 100%;
+}
+.supported-devices{
+    float:left;
+    display: inline-block;
+    height: 300px;
+    width: 400px;
+}
+.device-img{
+    max-height: 276px;
+}
+.device-tablet{
+    width: 350px;
+}
+.device-tablet-block {
+    display: table-cell;
+    vertical-align: bottom;
+    width: 400px;
 }
