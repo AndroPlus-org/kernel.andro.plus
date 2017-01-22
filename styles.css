@@ -603,23 +603,34 @@ margin: 0px auto;
     height: 276px;
 }
 .supported-devices-block{
-    height: 330px;
+    height: 300px;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
 }
 .supported-devices{
     float:left;
     display: inline-block;
     height: 300px;
-    width: 400px;
+    width: 300px;
 }
 .device-img{
     max-height: 276px;
 }
+.supported-devices-tablet{
+    width: 400px;
+}
 .device-tablet{
-    width: 350px;
+    width: 280px;
 }
 .device-tablet-block {
     display: table-cell;
     vertical-align: bottom;
     width: 400px;
+}
+@media (max-width: 1300px) {
+.device-hide-mobile{
+    display: none;
+}
 }
