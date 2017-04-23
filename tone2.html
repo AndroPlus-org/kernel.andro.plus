@@ -112,7 +112,8 @@
 	         <li>Xperia XZ [F8331 and F8332]</li>
 	         <br />
 		<li>stock 7.0</li>
-		<li>39.2.A.0.417 -> v21 - </li>
+		<li>39.2.A.0.442 -> v22 - </li>
+		<li>39.2.A.0.417 -> v21</li>
 		<li>39.2.A.0.386 -> v20</li>
 		<li>39.2.A.0.361 / 39.2.A.0.374 -> v19</li>
 		<li>39.2.A.0.327 -> v17 - v18</li>
@@ -182,6 +183,13 @@
         <div class="android-changelog-section mdl-typography--text-center">
          	<div id="changelog" name="changelog" class="mdl-typography--display-1-color-contrast">Changelog</div>
          	<div class="android-changelog">
+v22<br />
+Add support for 39.2.A.0.442<br />
+Fixed "adb reboot recovery" command (now you can enter into recovery with it)<br />
+NOTE: Keypress on boot is broken now. Please use official way (power down -> press power + volume minus -> when logo appears, release only power and hold volume minus)<br />
+Reverted DRM fix to old one because it breaks some functionality such as SoundEnhancement<br />
+<br />
+<br />--------------------------------------<br>
 v21<br />
 Add support for 39.2.A.0.417<br />
 Add "androidboot.verifiedbootstate=green" patch (for SafetyNet bypass, not tested)<br />
