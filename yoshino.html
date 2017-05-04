@@ -22,7 +22,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Introducing AndroPlus Kernel, a custom kernel for Xperia.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AndroPlus Kernel for tone X Performance</title>
+    <title>AndroPlus Kernel for Xperia XZ Premium</title>
 
     <!-- Page styles -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=ja" rel="stylesheet">
@@ -108,25 +108,16 @@
       <div class="android-content mdl-layout__content">
         <a name="top"></a>
         <div class="android-be-together-section mdl-typography--text-center">
-          <div class="android-font android-slogan">AndroPlus Kernel<br />for Xperia X Performance</div>
+          <div class="android-font android-slogan">AndroPlus Kernel<br />for Xperia XZ Premium</div>
         </div>
         
         <div class="android-requirements-section mdl-typography--text-center">
          <div class="mdl-typography--display-1-color-contrast">Requirements</div>
          <ul class="requirements">
-	         <li>Xperia X Performance [F8131 and F8132]</li>
+	         <li>Xperia XZ Premium [G8141 and G8142]</li>
 	         <br />
-	         <li>stock 7.1.1</li>
-		<li>41.2.A.2.199 -> v23 - </li>
-		<li>stock 7.0</li>
-		<li>39.2.A.0.442 -> v22</li>
-		<li>39.2.A.0.417 -> v21</li>
-		<li>39.2.A.0.386 -> v20</li>
-		<li>39.2.A.0.361 / 39.2.A.0.374 -> v19</li>
-		<li>39.2.A.0.327 -> v17 - v18</li>
-		<li>stock 6.0</li>
-		<li>35.0.A.1.275 -> v07 - v12</li>
-		<li>35.0.A.1.227 -> v01 - v06</li>
+		<li>stock 7.1.1</li>
+		<li>45.0.A.x.xxx -> </li>
 		<br />
 		<li>Unlocked bootloader</li>
 	</ul>
@@ -137,13 +128,12 @@
           <div id="download" name="download" class="mdl-typography--display-1-color-contrast">Download</div>
           <div class="android-screens">
             <div class="android-tablet-dl3 android-screen">
-              <a class="android-image-link" href="https://drive.google.com/folderview?id=0B0j3VJ1Xp5N8ZExNY0RLNzBqRUE&usp=sharing#list">
-                <img class="android-screen-image" src="images/dora.png">
+              <a class="android-image-link" href="https://drive.google.com/open?id=0B0j3VJ1Xp5N8NW8tMmgtdk1Wa3M#list">
+                <img class="android-screen-image" src="images/maple.png">
               </a>
-              <a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase" href="https://drive.google.com/folderview?id=0B0j3VJ1Xp5N8ZExNY0RLNzBqRUE&usp=sharing#list">Xperia X Performance</a>
+              <a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase" href="https://drive.google.com/open?id=0B0j3VJ1Xp5N8NW8tMmgtdk1Wa3M#list">Xperia XZ Premium</a>
             </div>
-            
-<br />--------------------------------------<br>
+           
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- レスポンシブ記事下 -->
 <ins class="adsbygoogle"
@@ -160,7 +150,7 @@
         <div class="android-changelog-section mdl-typography--text-center">
          	<div class="mdl-typography--display-1-color-contrast">How to install</div>
          	<div class="android-changelog">
-         	<p>
+         	<s><p>
 		1. Reboot into recovery or bootloader<br />
 		2. Flash kernel using recovery or fastboot<br />
 		Recovery - Install zip<br />
@@ -170,13 +160,13 @@
 		</div>
 		If you have no recovery, you also need to flash recovery by this command:
 		<div class="code_blk">
-		        <pre class="alt2 code" dir="ltr">fastboot flash recovery TWRP-3.0.2-4-F8132.img</pre>
+		        <pre class="alt2 code" dir="ltr">fastboot flash recovery TWRP-3.0.2-0-maple.img</pre>
 		</div>
 		3. Reboot<br />
 		4. Done!<br />
-		To root and install Xposed, you should flash BETA-SuperSU-v2.67 and xposed-v86-sdk23-arm64.zip in TWRP.<br />
+		To root and install Xposed, you should flash SuperSU zip (e.g. SR3-SuperSU-v2.79-SR3-20170114223742.zip) in TWRP.<br />
 		First/second boot will be bootloop and take some time to boot up correctly.<br />
-		</p>
+		</p></s>
         	</div>
         </div>
         <!-- レスポンシブ記事下 -->
@@ -191,113 +181,14 @@
         <div class="android-changelog-section mdl-typography--text-center">
          	<div id="changelog" name="changelog" class="mdl-typography--display-1-color-contrast">Changelog</div>
          	<div class="android-changelog">
-On Nougat update, Sony merged XZ and X Performance kernel source.<br />
-Please see <a href="tone2.html#changelog">changelog on XZ kernel page</a>.
-<br />
-<br />--------------------------------------<br>
-v12<br />
-Add support for 35.0.A.1.297<br />
-<br />
-v11<br />
-Fix CVE-2016-5195 "Dirty COW"<br />
-<br />
-v10<br />
-Added core_ctl<br />
-<div class="code_blk">If you want to test it, you have to setup core_ctl. Example:
-        <pre class="alt2 code" dir="ltr">echo 0 > /sys/devices/system/cpu/cpu0/core_ctl/disable
-echo 2 > /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
-echo 2 > /sys/devices/system/cpu/cpu0/core_ctl/max_cpus
-echo 60 > /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres
-echo 40 > /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres
-echo 100 > /sys/devices/system/cpu/cpu0/core_ctl/offline_delay_ms
-echo 4 > /sys/devices/system/cpu/cpu0/core_ctl/task_thres
-
-echo 0 > /sys/devices/system/cpu/cpu2/core_ctl/disable
-echo 1 > /sys/devices/system/cpu/cpu2/core_ctl/is_big_cluster
-echo 0 > /sys/devices/system/cpu/cpu2/core_ctl/min_cpus
-echo 2 > /sys/devices/system/cpu/cpu2/core_ctl/max_cpus
-echo 68 > /sys/devices/system/cpu/cpu2/core_ctl/busy_up_thres
-echo 40 > /sys/devices/system/cpu/cpu2/core_ctl/busy_down_thres
-echo 100 > /sys/devices/system/cpu/cpu2/core_ctl/offline_delay_ms
-# big won't be online much
-echo 1 > /sys/devices/system/cpu/cpu2/core_ctl/not_preferred</pre>
-</div>
-Updated darkness & alucard gov<br />
-<br />
-v09<br />
-Add support for touch in MultiROM menu (thanks AdrianDC!)<br />
-Set initial TCP window size to 64K<br />
-Silence log spam<br />
-<br />
-v08<br />
-Fixed CVE-2016-5343<br />
-Upgraded kernel memory management<br />
-<br />
-v07<br />
-Now fully supports 35.0.A.1.275!<br />
-<br />
-v06<br />
-TWRP-3.0.2-8 - Changed to copy blobs from system (smaller size and easy maintenance)<br />
-Changed ramdisk to 35.0.A.1.275 (waiting for kernel source...)<br />
-Updated alucard CPU gov<br />
-Fixed CVE-2016-3859, CVE-2016-3858, CVE-2016-5696, CVE-2016-5344<br />
-<br />
-v05<br />
-Fixed CVE-2016-3866<br />
-Added sound control (thanks @flar2 and @GuneetAtwal)<br />
-*NOTE: Sound control is in beta. Headphone, mic and speaker gain can be controlled by Kernel Adiutor, but speaker gain won't work and some apps like Music app will restore default volume when you skip music.
-<br />
-v04a<br />
-Fixed CVE-2016-3813, CVE-2016-2465, CVE-2016-2489<br />
-<br />
-v04<br />
-Fixed CVE-2016-2059<br />
-dm-crypt: increase threads<br />
-<br />
-v03<br />
-Added KCAL (thanks @savoca, @faux123, @flar2, @tbalden)<br />
-Added Adrenoboost (thanks @tbalden)<br />
-<div class="code_blk">
-        <pre class="alt2 code" dir="ltr">echo "2" > /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost
-        0 -> off, 1 -> smooth/battery friendly, 2 -> stronger, 3 -> aggressive</pre>
-</div>
-Added support for USB keyboard / mouse function (thanks pelya)<br />
-<div class="code_blk">
-        <pre class="alt2 code" dir="ltr">You can use Xperia as USB keyboard / mouse with this app:
-https://play.google.com/store/apps/details?id=remote.hid.keyboard.client</pre>
-</div>
-Fixed CVE-2016-2547 (merged changes from 35.0.A.1.244)<br />
-<br />
-v02<br />
-Now you can load TWRP!<br />
-To use TWRP:<br />
-1. Flash TWRP in fastboot<br />
-<div class="code_blk">
-        <pre class="alt2 code" dir="ltr">fastboot flash recovery TWRP-3.0.2-2-F8132-20160714.img</pre>
-</div>
-2. Press volume up or down key when LED is orange<br />
-3. Enter password/pin/pattern to decrypt your data.<br />
-<br />
-*NOTE: TWRP 3.0.2-2 only supports encryption with password/pin/pattern on boot for now, so you have to set password/pin/pattern in Settings -> Security -> Screen lock -> Select password/pin/pattern -> Select "Require (password/pin/pattern) to start device"<br />
-<br />
-Updated version code to support 35.0.A.1.238<br />
-* You should disable software update app to prevent persistent update notification. It says your system is not up to date when it finds new OTA, but actually minor update don't need kernel update. Also you can't apply OTA after bootloader unlocking.<br />
-Added patch to allow clients to get small buffers (1ms) for lowest latency<br />
-<br />
-v01<br />
+<s>v01<br />
 Disabled DM_VERITY, force module sig and CORESIGHT (debugging)<br>
 Added DRM patch<br />
 (please delete
 <div class="code_blk">
         <pre class="alt2 code" dir="ltr">/data/credmgr/credmgr.db</pre>
 </div> once to enable patch)<br />
-Added alucard cpu governor<br />
-Added additional TCP cong algorithms<br>
-Some GPU related patch<br>
-I/O scheduler BFQ, SIO and FIOPS<br>
-Added toggle for software crc and wlan wakelocks<br />
-ric disabled<br>
-insecure adb
+ric disabled</s>
         <script>
         $(".mdl-switch__input").prop("checked",false);
         $(".mdl-switch").click(function() {
@@ -325,7 +216,7 @@ insecure adb
          	<div class="mdl-typography--display-1-color-contrast">Source</div>
          	<div class="android-changelog">
          	<p>
-		<a href="https://github.com/AndroPlus-org/android_kernel_sony_msm8996">GitHub</a>
+		<a href="https://github.com/AndroPlus-org/android-kernel-sony-msm8998">GitHub</a>
 		</p>
         	</div>
         </div>
