@@ -117,9 +117,10 @@
 	         <li>Xperia XZ Premium [G8141 and G8142]</li>
 	         <br />
 		<li>stock 7.1.1</li>
-		<li>45.0.A.x.xxx -> </li>
+		<li>45.0.A.5.1, 45.0.A.5.8 -> v01 - </li>
 		<br />
 		<li>Unlocked bootloader</li>
+		<li>*G8141 is not tested.</li>
 	</ul>
         </div>
         
@@ -150,23 +151,25 @@
         <div class="android-changelog-section mdl-typography--text-center">
          	<div class="mdl-typography--display-1-color-contrast">How to install</div>
          	<div class="android-changelog">
-         	<s><p>
-		1. Reboot into recovery or bootloader<br />
-		2. Flash kernel using recovery or fastboot<br />
-		Recovery - Install zip<br />
+         	<p>
+		* Currently there is no TWRP. You can get root priv on the shell by "adb root".<br />
+		"_with_SuperSU" edition has integrated SuperSU.<br />
+		1. Reboot into <s>recovery or</s> bootloader<br />
+		2. Flash kernel using <s>recovery or</s> fastboot<br />
+		<s>Recovery - Install zip</s><br />
 		fastboot - Extract boot.img from zip and run this command:<br />
 		<div class="code_blk">
 		        <pre class="alt2 code" dir="ltr">fastboot flash boot boot.img</pre>
 		</div>
-		If you have no recovery, you also need to flash recovery by this command:
+		<s>If you have no recovery, you also need to flash recovery by this command:
 		<div class="code_blk">
-		        <pre class="alt2 code" dir="ltr">fastboot flash recovery TWRP-3.0.2-0-maple.img</pre>
-		</div>
+		        <pre class="alt2 code" dir="ltr">fastboot flash recovery TWRP-3.1.1-0-maple.img</pre>
+		</div></s>
 		3. Reboot<br />
 		4. Done!<br />
-		To root and install Xposed, you should flash SuperSU zip (e.g. SR3-SuperSU-v2.79-SR3-20170114223742.zip) in TWRP.<br />
+		<s>To root and install Xposed, you should flash SuperSU zip (e.g. SR3-SuperSU-v2.79-SR3-20170114223742.zip) in TWRP.<br /></s>
 		First/second boot will be bootloop and take some time to boot up correctly.<br />
-		</p></s>
+		</p>
         	</div>
         </div>
         <!-- レスポンシブ記事下 -->
@@ -181,14 +184,27 @@
         <div class="android-changelog-section mdl-typography--text-center">
          	<div id="changelog" name="changelog" class="mdl-typography--display-1-color-contrast">Changelog</div>
          	<div class="android-changelog">
-<s>v01<br />
-Disabled DM_VERITY, force module sig and CORESIGHT (debugging)<br>
-Added DRM patch<br />
-(please delete
+v01<br />
+Re-enabled double tap to wake<br />
+To enable it, run these commands:
 <div class="code_blk">
-        <pre class="alt2 code" dir="ltr">/data/credmgr/credmgr.db</pre>
-</div> once to enable patch)<br />
-ric disabled</s>
+        <pre class="alt2 code" dir="ltr">adb root
+adb shell
+/sbin/busybox mount -o remount,rw /system
+touch /system/usr/keylayout/clearpad.kl
+chmod 644 /system/usr/keylayout/clearpad.kl
+echo "key 531 WAKEUP" > /system/usr/keylayout/clearpad.kl
+setprop persist.sys.touch.easywakeup 1</pre>
+</div>
+Add maple/sio/fiops I/O Scheduler (yeah, Maple on Maple!)<br />
+Add iosched switcher<br />
+Add KCAL<br />
+Add wakelock blocker<br />
+Add alucard, darkness CPU governors<br />
+Add toggle for software crc<br />
+Add other misc patches<br />
+Disable DM_VERITY, force module sig and some debugging<br>
+Disable ric
         <script>
         $(".mdl-switch__input").prop("checked",false);
         $(".mdl-switch").click(function() {
