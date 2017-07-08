@@ -184,6 +184,14 @@
         <div class="android-changelog-section mdl-typography--text-center">
          	<div id="changelog" name="changelog" class="mdl-typography--display-1-color-contrast">Changelog</div>
          	<div class="android-changelog">
+v03<br />
+Change the way to wakeup of tap to wake - now you only need this command to enable it:
+<div class="code_blk">
+        <pre class="alt2 code" dir="ltr">
+adb shell
+setprop persist.sys.touch.easywakeup 1</pre>
+</div>
+<br />
 v02<br />
 Removed non-working DRM patch<br />
 *This fixes sound problem<br />
