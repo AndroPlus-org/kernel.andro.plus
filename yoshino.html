@@ -153,23 +153,19 @@
          	<div class="mdl-typography--display-1-color-contrast">How to install</div>
          	<div class="android-changelog">
          	<p>
-		* Currently there is no TWRP. You can get root priv on the shell by "adb root".<br />
-		"_with_SuperSU" edition has integrated SuperSU.<br />
-		1. Reboot into <s>recovery or</s> bootloader<br />
-		2. Flash kernel using <s>recovery or</s> fastboot<br />
-		<s>Recovery - Install zip</s><br />
+		1. Reboot into bootloader<br />
+		2. Flash kernel using fastboot<br />
 		fastboot - Extract boot.img from zip and run this command:<br />
 		<div class="code_blk">
 		        <pre class="alt2 code" dir="ltr">fastboot flash boot boot.img</pre>
 		</div>
-		<s>If you have no recovery, you also need to flash recovery by this command:
+		*If you have no recovery, you also need to flash recovery by this command:
 		<div class="code_blk">
 		        <pre class="alt2 code" dir="ltr">fastboot flash recovery TWRP-3.1.1-0-maple.img</pre>
-		</div></s>
+		</div>
+		You can enter into recovery by this way: power down -> press power + volume minus -> when logo appears, release only power and hold volume minus<br />
 		3. Reboot<br />
 		4. Done!<br />
-		<s>To root and install Xposed, you should flash SuperSU zip (e.g. SR3-SuperSU-v2.79-SR3-20170114223742.zip) in TWRP.<br /></s>
-		First/second boot will be bootloop and take some time to boot up correctly.<br />
 		</p>
         	</div>
         </div>
