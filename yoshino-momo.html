@@ -16,20 +16,20 @@
   limitations under the License
 -->
 
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Introducing AndroPlus Kernel, a custom kernel for Xperia.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AndroPlus Kernel for Xperia XZ Premium</title>
+    <title>AndroPlus Kernel for Xperia XZ Premium G8188</title>
 
     <!-- Page styles -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=ja" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles.css?date=20170122">
+    <link rel="stylesheet" href="styles.css?date=20171224">
     <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     
@@ -108,39 +108,30 @@
       <div class="android-content mdl-layout__content">
         <a name="top"></a>
         <div class="android-be-together-section mdl-typography--text-center">
-          <div class="android-font android-slogan">AndroPlus Kernel<br />for Xperia XZ Premium</div>
+          <div class="android-font android-slogan">AndroPlus Kernel<br />for Xperia XZ Premium G8188</div>
         </div>
         
         <div class="android-requirements-section mdl-typography--text-center">
-         <div class="mdl-typography--display-1-color-contrast">Requirements</div>
+         <div class="mdl-typography--display-1-color-contrast">対応ファームウェア</div>
          <ul class="requirements">
-	         <li>Xperia XZ Premium [G8141 and G8142]</li>
+	         <li>Xperia XZ Premium [G8188]</li>
 	         <br />
-	         <li>Stock 8.0.0</li>
-	         <li>47.1.A.8.49 -> v08</li>
-		<li>47.1.A.3.254 -> v07</li>
-		<li>Stock 7.1.1</li>
-		<li>45.0.A.7.137 -> v06</li>
-		<li>45.0.A.7.120 -> v05</li>
-		<li>45.0.A.7.90 -> v03 - v04</li>
-		<li>45.0.A.5.8 -> v01 - v02</li>
-		<li>45.0.A.5.1 and older is not officially supported.</li>
+	         <li>Stock 7.1.1</li>
+	         <li>45.0.C.0.94 -> v07</li>
 		<br />
-		<li>Unlocked bootloader</li>
+		<li>※Bootloader Unlock必須</li>
 	</ul>
-	*If you are looking for custom kernel for G8188, you can <a href="yoshino-momo.html">download it here</a>!<br />
-	G8188 向けのカスタムカーネルは<a href="yoshino-momo.html">こちらでダウンロード</a>できます！
         </div>
         
         <div class="android-screen-section mdl-typography--text-center">
           <a name="screens"></a>
-          <div id="download" name="download" class="mdl-typography--display-1-color-contrast">Download</div>
+          <div id="download" name="download" class="mdl-typography--display-1-color-contrast">ダウンロード</div>
           <div class="android-screens">
             <div class="android-tablet-dl3 android-screen">
-              <a class="android-image-link" href="https://drive.google.com/open?id=0B0j3VJ1Xp5N8NW8tMmgtdk1Wa3M#list">
+              <a class="android-image-link" href="https://drive.google.com/open?id=1ikxBsiPZYO9TnHJQUJQbMYj4EHzPkqN5#list">
                 <img class="android-screen-image" src="images/maple.png">
               </a>
-              <a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase" href="https://drive.google.com/open?id=0B0j3VJ1Xp5N8NW8tMmgtdk1Wa3M#list">Xperia XZ Premium</a>
+              <a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase" href="https://drive.google.com/open?id=1ikxBsiPZYO9TnHJQUJQbMYj4EHzPkqN5#list">Xperia XZ Premium</a>
             </div>
            
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -157,22 +148,22 @@
         </div>
         
         <div class="android-changelog-section mdl-typography--text-center">
-         	<div class="mdl-typography--display-1-color-contrast">How to install</div>
+         	<div class="mdl-typography--display-1-color-contrast">インストール方法</div>
          	<div class="android-changelog">
          	<p>
-		1. Reboot into bootloader<br />
-		2. Flash kernel using fastboot<br />
-		fastboot - Extract boot.img from zip and run this command:<br />
+		1. Bootloader へ再起動する<br />
+		2. fastboot コマンドでカーネルを焼く<br />
+		ZIP から boot.img を取り出し、以下のコマンドを実行してください:<br />
 		<div class="code_blk">
 		        <pre class="alt2 code" dir="ltr">fastboot flash boot boot.img</pre>
 		</div>
-		*If you have no recovery, you also need to flash recovery by this command:
+		※TWRPをインストールしていない場合、<a href="https://dl.twrp.me/maple/">公式ページからダウンロード</a>して以下のコマンドで焼いてください:
 		<div class="code_blk">
-		        <pre class="alt2 code" dir="ltr">fastboot flash recovery TWRP-3.1.1-0-maple.img</pre>
+		        <pre class="alt2 code" dir="ltr">fastboot flash recovery twrp-3.2.1-0-maple.img</pre>
 		</div>
-		You can enter into recovery by this way: power down -> press power + volume minus -> when logo appears, release only power and hold volume minus<br />
-		3. Reboot<br />
-		4. Done!<br />
+		TWRPを起動するには、電源を切った後、音量下と電源ボタンを長押しして起動し、Bootloader Unlockの警告が出たら音量下は押したまま、電源ボタンだけ離してください。<br />
+		3. 再起動する<br />
+		4. 完了!<br />
 		</p>
         	</div>
         </div>
@@ -186,62 +177,17 @@
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script>
         <div class="android-changelog-section mdl-typography--text-center">
-         	<div id="changelog" name="changelog" class="mdl-typography--display-1-color-contrast">Changelog</div>
+         	<div id="changelog" name="changelog" class="mdl-typography--display-1-color-contrast">更新履歴</div>
          	<div class="android-changelog">
 v08<br />
-Changed kernel base to 47.1.A.8.49<br />
-v07<br />
-Changed kernel base to 47.1.A.3.254<br />
-Added Alucard<br />
-Fixed "adb reboot recovery" command<br />
-Reverted some changes to fix boot on Oreo<br />
-NOTE: You should flash Magisk v14.3 to get root<br />
-Please use <a href="https://twrp.me/sony/sonyxperiaxzpremium.html">TWRP from official website</a>
-<br />
-v06<br />
-Changed kernel base to 45.0.A.7.137<br />
-Added patch for BlueBorne<br />
-<br />
-v05<br />
-Changed kernel base to 45.0.A.7.120<br />
-<br />
-v04<br />
-Changed kernel base to 45.0.A.7.90<br />
-Enabled HZ_1000<br />
-<br />
-v03<br />
-Change the way to wakeup of tap to wake - now you only need this command to enable it:
+45.0.C.0.94に対応しました。<br />
+ほぼG8142向けカーネルと同じ機能/パッチを当てています。<br />
+タップして起動を有効化するには、以下のコマンドを実行してください。<br />
 <div class="code_blk">
         <pre class="alt2 code" dir="ltr">
 adb shell
 setprop persist.sys.touch.easywakeup 1</pre>
 </div>
-<br />
-v02<br />
-Removed non-working DRM patch<br />
-*This fixes sound problem<br />
-<br />
-v01<br />
-Re-enabled double tap to wake<br />
-To enable it, run these commands:
-<div class="code_blk">
-        <pre class="alt2 code" dir="ltr">adb root
-adb shell
-/sbin/busybox mount -o remount,rw /system
-touch /system/usr/keylayout/clearpad.kl
-chmod 644 /system/usr/keylayout/clearpad.kl
-echo "key 531 WAKEUP" > /system/usr/keylayout/clearpad.kl
-setprop persist.sys.touch.easywakeup 1</pre>
-</div>
-Add maple/sio/fiops I/O Scheduler (yeah, Maple on Maple!)<br />
-Add iosched switcher<br />
-Add KCAL<br />
-Add wakelock blocker<br />
-Add alucard, darkness CPU governors<br />
-Add toggle for software crc<br />
-Add other misc patches<br />
-Disable DM_VERITY, force module sig and some debugging<br>
-Disable ric
         <script>
         $(".mdl-switch__input").prop("checked",false);
         $(".mdl-switch").click(function() {
@@ -266,7 +212,7 @@ Disable ric
  </div>
         
         <div class="android-changelog-section mdl-typography--text-center">
-         	<div class="mdl-typography--display-1-color-contrast">Source</div>
+         	<div class="mdl-typography--display-1-color-contrast">カーネルソース</div>
          	<div class="android-changelog">
          	<p>
 		<a href="https://github.com/AndroPlus-org/android-kernel-sony-msm8998">GitHub</a>
@@ -275,17 +221,17 @@ Disable ric
         </div>
         
         <div class="android-more-section">
-          <div class="android-section-title mdl-typography--display-1-color-contrast">More from AndroPlus</div>
+          <div class="android-section-title mdl-typography--display-1-color-contrast">AndroPlusの他サイト</div>
           <div class="android-card-container mdl-grid">
             <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
               <div class="mdl-card__media">
                 <img src="images/more-from-1.png">
               </div>
               <div class="mdl-card__title">
-                 <h4 class="mdl-card__title-text">FTF for Japanese Xperia</h4>
+                 <h4 class="mdl-card__title-text">日本向け Xperia の FTF コレクション</h4>
               </div>
               <div class="mdl-card__supporting-text">
-                <span class="mdl-typography--font-light mdl-typography--subhead">Mega collection of FTFs for Japanese models. If you have FTF which is not listed on the website, please send me via <a href="https://drive.google.com/drive/folders/0B0j3VJ1Xp5N8eVdnUFZHUG1HWms?usp=sharing">Google Drive</a> or <a href="http://forum.xda-developers.com/member.php?u=5169444">PM me on xda</a>.</span>
+                <span class="mdl-typography--font-light mdl-typography--subhead">日本向け Xperia の FTF コレクションです。ページに無い FTF をお持ちの方は、<a href="https://drive.google.com/drive/folders/0B0j3VJ1Xp5N8eVdnUFZHUG1HWms?usp=sharing">Google ドライブ</a>にアップロードしてくだされば追加します。</span>
               </div>
               <div class="mdl-card__actions">
                  <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="https://ftf.andro.plus/">
@@ -300,14 +246,14 @@ Disable ric
                 <img src="images/more-from-2.jpg">
               </div>
               <div class="mdl-card__title">
-                 <h4 class="mdl-card__title-text">Xperia Codename List</h4>
+                 <h4 class="mdl-card__title-text">Xperia コードネーム一覧</h4>
               </div>
               <div class="mdl-card__supporting-text">
-                <span class="mdl-typography--font-light mdl-typography--subhead">The list of codenames of all Xperia!</span>
+                <span class="mdl-typography--font-light mdl-typography--subhead">これまでのすべての Xperia のコードネームを掲載しています!</span>
               </div>
               <div class="mdl-card__actions">
                  <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="https://ftf.andro.plus/codenames.html">
-                   Xperia codenames
+                   Xperia コードネーム一覧
                    <i class="material-icons">chevron_right</i>
                  </a>
               </div>
@@ -318,14 +264,14 @@ Disable ric
                 <img src="images/more-from-3.jpg">
               </div>
               <div class="mdl-card__title">
-                 <h4 class="mdl-card__title-text">Get my Xposed modules for Xperia</h4>
+                 <h4 class="mdl-card__title-text">Xperia 向け Xposed モジュール</h4>
               </div>
               <div class="mdl-card__supporting-text">
-                <span class="mdl-typography--font-light mdl-typography--subhead">Simple and effective Xposed modules for Xperia devices - you can enable hidden features and mods with one tap.</span>
+                <span class="mdl-typography--font-light mdl-typography--subhead">Xperia 向けの Xposed モジュールを公開しています。</span>
               </div>
               <div class="mdl-card__actions">
                  <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="https://play.google.com/store/apps/developer?id=AndroPlus">
-                   Download now
+                   ダウンロード
                    <i class="material-icons">chevron_right</i>
                  </a>
               </div>
@@ -336,10 +282,10 @@ Disable ric
                 <img src="images/more-from-4.jpg">
               </div>
               <div class="mdl-card__title">
-                 <h4 class="mdl-card__title-text">Go to my blog, AndroPlus.org</h4>
+                 <h4 class="mdl-card__title-text">AndroPlus.org</h4>
               </div>
               <div class="mdl-card__supporting-text">
-                <span class="mdl-typography--font-light mdl-typography--subhead">My blog for Xperia related information. Sorry, but most blog posts are only displayed in Japanese.</span>
+                <span class="mdl-typography--font-light mdl-typography--subhead">Xperia を初めとするスマートフォン関連の記事を投稿しています。</span>
               </div>
               <div class="mdl-card__actions">
                  <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="https://androplus.org/">
@@ -362,7 +308,7 @@ Disable ric
             </div>
             <div class="mdl-mega-footer--right-section">
               <a class="mdl-typography--font-light" href="#top">
-                Back to Top
+                トップへ戻る
                 <i class="material-icons">expand_less</i>
               </a>
             </div>
@@ -374,8 +320,8 @@ Disable ric
           </div>
 
           <div class="mdl-mega-footer--bottom-section">
-            <a class="android-link mdl-typography--font-light" href="https://androplus.org/">Blog</a>
-            <a class="android-link mdl-typography--font-light" href="privacy.html">Privacy Policy</a>
+            <a class="android-link mdl-typography--font-light" href="https://androplus.org/">ブログ</a>
+            <a class="android-link mdl-typography--font-light" href="privacy.html">プライバシーポリシー</a>
           </div>
 
         </footer>
